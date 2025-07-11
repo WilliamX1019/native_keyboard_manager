@@ -21,7 +21,10 @@ public class SwiftNativeKeyboardManagerPlugin: NSObject, FlutterPlugin {
         switch call.method {
         case "dismissKeyboard":
             // 向整个应用发送 resignFirstResponder 动作，关闭键盘
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            // UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.windows.forEach { window in
+                window.endEditing(true)
+            }
             result(nil)
         case "showKeyboard":
             // iOS 没有直接显示键盘的 API，这需要 TextField 自己调用 becomeFirstResponder。
