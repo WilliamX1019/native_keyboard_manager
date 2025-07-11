@@ -1,10 +1,10 @@
 name: native_keyboard_manager
 description: "A new Flutter plugin project."
-version: 0.0.1
-homepage:
+version: 0.0.1+1
+homepage: https://github.com/WilliamX1019
 
 environment:
-  sdk: ^3.5.0
+  sdk: ^3.2.0
   flutter: '>=3.3.0'
 
 dependencies:
@@ -38,7 +38,7 @@ flutter:
         package: com.example.native_keyboard_manager
         pluginClass: NativeKeyboardManagerPlugin
       ios:
-        pluginClass: NativeKeyboardManagerPlugin
+        pluginClass: SwiftNativeKeyboardManagerPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

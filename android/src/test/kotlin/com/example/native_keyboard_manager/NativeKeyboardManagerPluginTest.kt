@@ -1,4 +1,4 @@
-package com.example.native_keyboard_manager
+package com.plugins.native_keyboard_manager
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
