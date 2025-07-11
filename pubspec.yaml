@@ -1,6 +1,6 @@
 name: native_keyboard_manager
 description: "A new Flutter plugin project."
-version: 0.0.1+1
+version: 0.0.2+1
 homepage: https://github.com/WilliamX1019
 
 environment:
