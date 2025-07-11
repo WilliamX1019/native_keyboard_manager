@@ -18,7 +18,9 @@ public class SwiftNativeKeyboardManagerPlugin: NSObject, FlutterPlugin, FlutterS
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch call.method {
         case "dismissKeyboard":
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        UIApplication.shared.windows.forEach { window in
+            window.endEditing(true)
+        }
             result(nil)
         case "showKeyboard":
             // iOS does not have a generic API to "show" the keyboard.
